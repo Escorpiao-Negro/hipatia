@@ -1,7 +1,24 @@
 doctype html
 html
   head
-    title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
+    title Hipatia
+    link(rel='stylesheet' href='/stylesheets/style.css')
   body
-    block content
+    div(class="header")
+      div(class="container")
+        div(class="row align-items-center")
+          div(class="col-4")
+            div(class="title") Hipatia
+          div(class="col-2")
+            a(href="/") Homepage
+          div(class="col-2")
+            a(href="/upload") Upload
+          div(class="col-2")
+            a(href="/search") Search
+          div(class="col-2")
+            a(href="/about") About
+    div(class="body")
+      div(class="container")
+        div(class="row align-items-center")
+          div(class="col-12")
+            block content

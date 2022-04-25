@@ -1,12 +1,12 @@
 {
-  "name": "biblioteca",
+  "name": "hipatia",
+  "version": "0.0.1",
+  "private": true,
   "author": {
     "name": "Ed de Almeida",
     "email": "edvaldoajunior@gmail.com",
     "url": "http://eddealmeida.blog.br"
   },
-  "version": "0.0.1",
-  "private": true,
   "scripts": {
     "sass": "sass ./public/stylesheets/style.scss ./public/stylesheets/style.css",
     "start": "npm run sass && node ./bin/www"
