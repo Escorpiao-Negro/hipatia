@@ -1,0 +1,25 @@
+{
+  "name": "biblioteca",
+  "author": {
+    "name": "Ed de Almeida",
+    "email": "edvaldoajunior@gmail.com",
+    "url": "http://eddealmeida.blog.br"
+  },
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "sass": "sass ./public/stylesheets/style.scss ./public/stylesheets/style.css",
+    "start": "npm run sass && node ./bin/www"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "morgan": "~1.9.1",
+    "pug": "2.0.0-beta11"
+  },
+  "devDependencies": {
+    "sass": "^1.50.1"
+  }
+}
