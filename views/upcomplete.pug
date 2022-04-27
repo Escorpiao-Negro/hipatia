@@ -1,0 +1,27 @@
+extends layout
+
+block content
+  div(class="col-8 offset-2")
+    div(class="standard-box")
+      table(class="table table-borderless")
+        tbody 
+          tr 
+            td Author 
+            td #{author}
+          tr 
+            td Book 
+            td #{title}
+          tr 
+            td Type
+            td #{type}
+          tr
+            td Language
+            td #{language}
+          tr
+            td File
+            td #{file}
+      div(class="row")
+        div(class="col-6 centered-text")
+          button(type="button" class="btn btn-primary" onclick="window.location.href='/'") Go to Homepage 
+        div(class="col-6 centered-text")
+          button(type="button" class="btn btn-info" onclick="window.location.href='/upload'") Upload another file

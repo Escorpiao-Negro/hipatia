@@ -1,13 +1,37 @@
 extends layout
 
 block content
-  div(class="col-6")
+  div(class="col-8 offset-2")
     div(class="standard-box")
-      form(action="/api/document/upload" method="POST")
-        div(class="")
-          input(type="file" class="form-control")
+      form(action="/api/document/upload" method="post" enctype="multipart/form-data")
+        div Author
+          div(class="row mb-3")
+            div(class="col-4")
+              input(type="text" name="author_name" class="form-control" placeholder="First name")
+            div(class="col-4")
+              input(type="text" name="author_middle" class="form-control" placeholder="Middle name")
+            div(class="col-4")
+              input(type="text" name="author_surname" class="form-control" placeholder="Surname")
+        div Book
+          div(class="row mb-3")
+            div(class="col-12")
+              input(type="text" name="book_title" class="form-control" placeholder="Title")
+            div(class="col-12")
+              select(class="form-control" name="book_type" placeholder="Subject")
+                option(value=1) Filosofia
+                option(value=2) História
+                option(value=3) Psicanálise
+            div(class="col-12")
+              select(class="form-control" name="book_language" placeholder="Language")
+                option(value=1) Inglês 
+                option(value=2) Português 
+                option(value=3) Espanhol 
+                option(value=4) Alemão
         div
-          input(type="submit" class="form-control")
-  div(class="col-6")
-    div(class="standard-box")
-      p Testando parágrafo.
+          div(class="row mb-3")
+            div(class="col-12")
+              input(type="file" name="file" id="file" class="form-control")
+        div
+          div(class="row mb-3")
+            div(class="col-12")
+              button(class="btn btn-primary" type="button" class="form-control" onclick="submit()") Upload

@@ -42,8 +42,9 @@ body {
     margin: 1rem 0rem 1rem 0rem;
     div.container {
       div.row {
-        div.col-6 {
+        div.col-8 {
           div.standard-box {
+            margin-top: 2rem;
             padding: 2rem;
             border: 1px solid black;
             -webkit-border-radius: 11px;
@@ -56,4 +57,6 @@ body {
   }
 }
 
-
+.centered-text {
+  text-align: center;
+}

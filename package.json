@@ -9,17 +9,52 @@
   },
   "scripts": {
     "sass": "sass ./public/stylesheets/style.scss ./public/stylesheets/style.css",
-    "start": "npm run sass && node ./bin/www"
+    "start": "npm run sass && node ./bin/www",
+    "format": "./node_modules/eslint/bin/eslint.js ./** --fix"
   },
+  "eslintConfig": {
+    "env": {
+      "browser": true,
+      "es2021": true
+    },
+    "parserOptions": {
+      "ecmaVersion": "latest",
+      "sourceType": "module"
+    },
+    "rules": {
+      "indent": [
+        "error",
+        2
+      ],
+      "linebreak-style": [
+        "error",
+        "unix"
+      ],
+      "quotes": [
+        "error",
+        "double"
+      ],
+      "semi": [
+        "error",
+        "always"
+      ]
+    }
+  },
+  "eslintIgnore": [
+    "./node_modules/",
+    "*.scss"
+  ],
   "dependencies": {
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
     "express": "~4.16.1",
     "http-errors": "~1.6.3",
     "morgan": "~1.9.1",
+    "multer": "^1.4.4",
     "pug": "2.0.0-beta11"
   },
   "devDependencies": {
+    "eslint": "^8.14.0",
     "sass": "^1.50.1"
   }
 }
