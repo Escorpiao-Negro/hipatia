@@ -15,20 +15,20 @@ module.exports = {
           ' ',
           '_'
         )}`
-        req.body["book_file"] = fileName;
+        req.body['book_file'] = fileName
         cb(null, fileName)
       })
     }
   }),
   limits: {
     fileSize: 10 * 1024 * 1024
+  },
+  fileFilter: (req, file, cb) => {
+    const allowedMimes = ['application/pdf']
+    if (allowedMimes.includes(file.mimetype)) {
+      cb(null, true)
+    } else {
+      cb(new Error('Invalid file type.'))
+    }
   }
-  // fileFilter: (req, file, cb) => {
-  //   const allowedMimes = ['application/pdf']
-  //   if (allowedMimes.includes(file.mimetype)) {
-  //     cb(null, true)
-  //   } else {
-  //     cb(new Error('Invalid file type.'))
-  //   }
-  // }
 }
