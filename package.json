@@ -10,7 +10,10 @@
   "scripts": {
     "sass": "sass ./public/stylesheets/style.scss ./public/stylesheets/style.css",
     "start": "npm run sass && node ./bin/www",
-    "format": "./node_modules/eslint/bin/eslint.js ./routes/** --fix"
+    "fixroutes": "./node_modules/eslint/bin/eslint.js ./routes/** --fix",
+    "fixsequelize": "./node_modules/eslint/bin/eslint.js ./sequelize/** --fix",
+    "fixapp": "./node_modules/eslint/bin/eslint.js ./app.js --fix",
+    "format": "npm run fixroutes && npm run fixsequelize && npm run fixapp"
   },
   "eslintConfig": {
     "env": {
@@ -48,6 +51,7 @@
   "dependencies": {
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
+    "dotenv": "^16.0.0",
     "express": "~4.16.1",
     "http-errors": "~1.6.3",
     "morgan": "~1.9.1",
